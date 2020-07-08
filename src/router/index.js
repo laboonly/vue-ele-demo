@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import App from '../App'
 
-const home = r => require.ensure([], () => r(require('../views/home')), 'home')
+// const home = r => require.ensure([], () => r(require('../views/home')), 'home')
 
 Vue.use(Router)
 
@@ -19,7 +19,7 @@ export default new Router({
         },
         {
           path: '/home',
-          component: home
+          component: () => import('@/views/home')
         }
       ]
     }
