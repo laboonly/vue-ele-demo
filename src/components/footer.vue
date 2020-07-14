@@ -1,10 +1,22 @@
 <template>
     <div class="footer">
         <ul>
-            <li><span class="icon"><svg-icon icon-class="ele"  /></span>ele</li>
-            <li><span><svg-icon icon-class="found"  /></span>ele</li>
-            <li><svg-icon icon-class="ele" />ele</li>
-            <li><svg-icon icon-class="ele" />ele</li>
+            <li class="active">
+                <svg-icon icon-class="ele"></svg-icon><br/>
+                <span>外卖</span>
+            </li>
+            <li>
+                <svg-icon icon-class="faxian"></svg-icon><br/>
+                <span>发现</span>
+            </li>
+            <li>
+                <svg-icon icon-class="dingdan"></svg-icon><br/>
+                <span>订单</span>
+            </li>
+            <li>
+                <svg-icon icon-class="wode"></svg-icon><br/>
+                <span>我的</span>
+            </li>
         </ul>
     </div>
 </template>
@@ -20,20 +32,37 @@ export default {
     .footer {
         position: fixed;
         bottom: 0;
-        background-color: #333;
         width: 100%;
         height: 100px;
+        border-top: 1px solid #DCDFE6;
+        background-color: #FFFFFF;
         color: #FFFFFF;
         padding: 20px 20px;
     }
     ul {
+        display: flex;
+        justify-content: space-between;
         li {
-            float: left;
-            color: #FFFFFF;
+            color: #C0C4CC;
+            width: 40px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 18px;
+            .svg-icon {
+                color: #3190e8;
+                font-size: 30px;
+            }
+            span {
+                color: #C0C4CC;
+            }
+        }
+
+        .active {
+            color: #3190e8;
+            span {
+                color: #3190e8;
+            }
         }
     }
-    .icon {
-        color: #1296db;
-        font-size: 30px;
-    }
+
 </style>
