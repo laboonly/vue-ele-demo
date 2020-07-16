@@ -33,11 +33,11 @@ export default {
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 100px;
+        height: 1.95rem;
         border-top: 1px solid #DCDFE6;
         background-color: #FFFFFF;
         color: #FFFFFF;
-        padding: 20px 20px;
+        padding: 0.25rem 0.15rem;
     }
     ul {
         display: flex;
@@ -47,10 +47,10 @@ export default {
             width: 40px;
             text-align: center;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 0.45rem;
             .svg-icon {
                 color: #3190e8;
-                font-size: 30px;
+                font-size: 0.85rem;
             }
             span {
                 color: #C0C4CC;

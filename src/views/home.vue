@@ -1,5 +1,6 @@
 <template>
   <div class="home-content">
+    <Menu></Menu>
     <div class="category">
       <swiper class="swiper" :options="swiperOption">
           <swiper-slide>
@@ -115,32 +116,173 @@
           <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
           <div class="card-text">
             <div class="header">
-              <h2><span class="brand">品牌</span>效果演示</h2>
-              <section>
+                <p class="hea"><span class="brand">品牌</span>效果演示</p>
                 <p><span>保</span><span>准</span><span>票</span></p>
-              </section>
             </div>
             <div class="rate">
-              <section>
-                <el-rate
-                  v-model="value"
-                  disabled
-                  show-score
-                  text-color="#ff9900"
-                  score-template="{value}">
-                </el-rate>
-                <span>月售106单</span>
-              </section>
-              <section>
-                <span>蜂鸟专送</span><span>准时达</span>
-              </section>
+              <div class="span-l">
+                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
+              </div>
+              <div class="span-l">
+                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
+              </div>
             </div>
             <div class="shop-info">
               <section>
                 <p>￥20起送 / 配送费约￥5</p>
               </section>
               <section>
-                <p><span>1818.7公里</span> / <span>19小时17分钟</span></p>
+                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="shops-card">
+          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
+          <div class="card-text">
+            <div class="header">
+                <p class="hea"><span class="brand">品牌</span>效果演示</p>
+                <p><span>保</span><span>准</span><span>票</span></p>
+            </div>
+            <div class="rate">
+              <div class="span-l">
+                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
+              </div>
+              <div class="span-l">
+                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
+              </div>
+            </div>
+            <div class="shop-info">
+              <section>
+                <p>￥20起送 / 配送费约￥5</p>
+              </section>
+              <section>
+                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="shops-card">
+          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
+          <div class="card-text">
+            <div class="header">
+                <p class="hea"><span class="brand">品牌</span>效果演示</p>
+                <p><span>保</span><span>准</span><span>票</span></p>
+            </div>
+            <div class="rate">
+              <div class="span-l">
+                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
+              </div>
+              <div class="span-l">
+                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
+              </div>
+            </div>
+            <div class="shop-info">
+              <section>
+                <p>￥20起送 / 配送费约￥5</p>
+              </section>
+              <section>
+                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="shops-card">
+          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
+          <div class="card-text">
+            <div class="header">
+                <p class="hea"><span class="brand">品牌</span>效果演示</p>
+                <p><span>保</span><span>准</span><span>票</span></p>
+            </div>
+            <div class="rate">
+              <div class="span-l">
+                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
+              </div>
+              <div class="span-l">
+                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
+              </div>
+            </div>
+            <div class="shop-info">
+              <section>
+                <p>￥20起送 / 配送费约￥5</p>
+              </section>
+              <section>
+                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="shops-card">
+          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
+          <div class="card-text">
+            <div class="header">
+                <p class="hea"><span class="brand">品牌</span>效果演示</p>
+                <p><span>保</span><span>准</span><span>票</span></p>
+            </div>
+            <div class="rate">
+              <div class="span-l">
+                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
+              </div>
+              <div class="span-l">
+                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
+              </div>
+            </div>
+            <div class="shop-info">
+              <section>
+                <p>￥20起送 / 配送费约￥5</p>
+              </section>
+              <section>
+                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="shops-card">
+          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
+          <div class="card-text">
+            <div class="header">
+                <p class="hea"><span class="brand">品牌</span>效果演示</p>
+                <p><span>保</span><span>准</span><span>票</span></p>
+            </div>
+            <div class="rate">
+              <div class="span-l">
+                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
+              </div>
+              <div class="span-l">
+                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
+              </div>
+            </div>
+            <div class="shop-info">
+              <section>
+                <p>￥20起送 / 配送费约￥5</p>
+              </section>
+              <section>
+                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="shops-card">
+          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
+          <div class="card-text">
+            <div class="header">
+                <p class="hea"><span class="brand">品牌</span>效果演示</p>
+                <p><span>保</span><span>准</span><span>票</span></p>
+            </div>
+            <div class="rate">
+              <div class="span-l">
+                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
+              </div>
+              <div class="span-l">
+                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
+              </div>
+            </div>
+            <div class="shop-info">
+              <section>
+                <p>￥20起送 / 配送费约￥5</p>
+              </section>
+              <section>
+                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
               </section>
             </div>
           </div>
@@ -153,10 +295,11 @@
 
 <script>
 import Footer from '../components/footer'
-
+import Menu from '../components/menu'
 export default {
   components: {
-    Footer
+    Footer,
+    Menu
   },
   data () {
     return {
@@ -174,6 +317,7 @@ export default {
 <style lang="less" scoped>
   .home-content {
     background-color: #F5F5F5;
+    padding: 1.95rem 0;
   }
   .category {
     background-color: #FFFFFF;
@@ -203,21 +347,28 @@ export default {
     }
   }
   .shops-content {
-    margin-top: 20px;
-    padding: 20px 0;
+    margin-top: 0.4rem;
+    padding: 0.4rem 0;
     background-color: #FFFFFF;
     h3 {
-      padding: 0 20px;
+      padding: 0 0.4rem;
+      font-size: 0.55rem;
+      line-height: 1.6rem;
+      color: #999;
     }
     .shops-list {
-      margin-top: 20px;
+      margin-top: 0.4rem;
     }
 
+  }
+  .blue {
+    color: #3190e8;
   }
   .shops-card {
     display: flex;
     justify-content: flex-start;
-    padding: 20px 20px;
+    padding: 0.7rem 0.4rem;
+    border-bottom: 0.025rem solid #f1f1f1;
     .bg-img {
       flex-shrink: 0;
       width: 2.7rem;
@@ -234,7 +385,7 @@ export default {
         display: flex;
         justify-content: space-between;
       }
-      h2 {
+      .hea {
         font-size: 0.65rem;
         font-weight: 600;
         vertical-align: middle;
@@ -246,13 +397,32 @@ export default {
           padding: 0.1rem 0.1rem;
         }
       }
+      .span-l {
+        line-height: 0.4rem;
+
+      }
       .el-rate {
         display: inline-block;
+        line-height: 0.4rem;
       }
       .rate {
         margin: 0.52rem 0;
         display: flex;
         justify-content: space-between;
+      }
+      .zhuansong {
+        color: #ffffff;
+        background-color: #3190e8;
+        border: 0.025rem solid #3190e8;
+        padding: 0.04rem 0.08rem 0;
+        border-radius: 0.08rem;
+      }
+      .zhunshida {
+        color: #3190e8;
+        border: 0.025rem solid #3190e8;
+        padding: 0.04rem 0.08rem 0;
+        border-radius: 0.08rem;
+        margin-left: 0.08rem;
       }
       .shop-info {
         display: flex;
@@ -260,6 +430,9 @@ export default {
         p {
           font-size: 0.4rem;
         }
+      }
+      p {
+        line-height: 0.4rem;
       }
       span {
         font-size: 0.4rem;
@@ -274,5 +447,6 @@ export default {
       color: #C0C4CC;
       -webkit-transition: .3s;
       transition: .3s;
+      line-height: 0.4rem;
   }
 </style>>
