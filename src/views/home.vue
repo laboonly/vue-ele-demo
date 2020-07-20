@@ -315,12 +315,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
+  @import '../style/mixin';
+
   .home-content {
     background-color: #F5F5F5;
     padding: 1.95rem 0;
   }
   .category {
-    background-color: #FFFFFF;
+    background-color: @fc;
   }
   .category-list {
     width: 100%;
@@ -373,9 +375,7 @@ export default {
       flex-shrink: 0;
       width: 2.7rem;
       height: 2.7rem;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      .bis();
       border-radius: 5px;
     }
     .card-text {
