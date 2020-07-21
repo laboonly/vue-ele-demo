@@ -50,6 +50,9 @@
                                         <strong class="header-title">热销榜</strong>
                                         <span class="header-description">热销来袭</span>
                                     </section>
+                                    <section class="more-button">
+                                        <svg-icon icon-class="more"></svg-icon>
+                                    </section>
                                 </header>
                                 <div class="foods-card-list">
                                     <div class="foods-card">
@@ -64,7 +67,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button show-choose">选择规格</div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -78,7 +81,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -92,7 +95,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -106,7 +109,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -120,7 +123,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -134,7 +137,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -148,7 +151,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -162,7 +165,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -176,7 +179,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                     <div class="foods-card">
                                         <el-image
@@ -190,7 +193,7 @@
                                             <p class="sala"><span>5.7折</span></p>
                                             <p class="price"><span class="rmb">￥</span><span>7.9</span> <span class="rmb">￥</span><span>13.9</span></p>
                                         </div>
-                                        <div class="add-button"></div>
+                                        <div class="add-button"><svg-icon icon-class="add"></svg-icon></div>
                                     </div>
                                 </div>
                             </li>
@@ -375,6 +378,7 @@ export default {
             position: relative;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             .header-title {
                 font-size: 0.7rem;
                 color: #666;
@@ -386,6 +390,10 @@ export default {
                 width: 30%;
                 overflow: hidden;
             }
+            .more-button {
+                font-size: 1rem;
+                color: #999;
+            }
         }
         .foods-card {
             background-color: @fc;
@@ -395,6 +403,21 @@ export default {
             overflow: hidden;
             display: flex;
             justify-content: flex-start;
+            .add-button {
+                position: absolute;
+                right: 0.5rem;
+                bottom: 0.5rem;
+                color: @blue;
+                font-size: 0.9rem;
+            }
+            .show-choose {
+                font-size: 0.55rem;
+                color: #fff;
+                padding: .1rem .2rem;
+                background-color: #3190e8;
+                border-radius: 0.2rem;
+                border: 1px solid #3190e8;
+            }
             .img-bg {
                 .bis();
                 .borderRadius(0.15rem);
