@@ -112,7 +112,7 @@
     <div class="shops-content">
       <h3>附近商家</h3>
       <div class="shops-list">
-        <div class="shops-card">
+        <router-link :to="{ path: '/shop'}" class="shops-card">
           <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
           <div class="card-text">
             <div class="header">
@@ -136,8 +136,8 @@
               </section>
             </div>
           </div>
-        </div>
-        <div class="shops-card">
+        </router-link>
+        <router-link :to="{ path: '/shop'}" class="shops-card">
           <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
           <div class="card-text">
             <div class="header">
@@ -161,8 +161,8 @@
               </section>
             </div>
           </div>
-        </div>
-        <div class="shops-card">
+        </router-link>
+        <router-link :to="{ path: '/shop'}" class="shops-card">
           <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
           <div class="card-text">
             <div class="header">
@@ -186,8 +186,8 @@
               </section>
             </div>
           </div>
-        </div>
-        <div class="shops-card">
+        </router-link>
+        <router-link :to="{ path: '/shop'}" class="shops-card">
           <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
           <div class="card-text">
             <div class="header">
@@ -211,8 +211,8 @@
               </section>
             </div>
           </div>
-        </div>
-        <div class="shops-card">
+        </router-link>
+        <router-link :to="{ path: '/shop'}" class="shops-card">
           <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
           <div class="card-text">
             <div class="header">
@@ -236,57 +236,7 @@
               </section>
             </div>
           </div>
-        </div>
-        <div class="shops-card">
-          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
-          <div class="card-text">
-            <div class="header">
-                <p class="hea"><span class="brand">品牌</span>效果演示</p>
-                <p><span>保</span><span>准</span><span>票</span></p>
-            </div>
-            <div class="rate">
-              <div class="span-l">
-                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
-              </div>
-              <div class="span-l">
-                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
-              </div>
-            </div>
-            <div class="shop-info">
-              <section>
-                <p>￥20起送 / 配送费约￥5</p>
-              </section>
-              <section>
-                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
-              </section>
-            </div>
-          </div>
-        </div>
-        <div class="shops-card">
-          <div class="bg-img" :style="{'backgroundImage': 'url(' + require(`@/assets/image/food.jpg`) + ')'}"></div>
-          <div class="card-text">
-            <div class="header">
-                <p class="hea"><span class="brand">品牌</span>效果演示</p>
-                <p><span>保</span><span>准</span><span>票</span></p>
-            </div>
-            <div class="rate">
-              <div class="span-l">
-                <el-rate v-model="value"  disabled  show-score  text-color="#ff9900" score-template="{value}"></el-rate> <span>月售106单</span>
-              </div>
-              <div class="span-l">
-                <p><span class="zhuansong">蜂鸟专送</span><span class="zhunshida">准时达</span></p>
-              </div>
-            </div>
-            <div class="shop-info">
-              <section>
-                <p>￥20起送 / 配送费约￥5</p>
-              </section>
-              <section>
-                <p><span>1818.7公里</span> / <span class="blue">19小时17分钟</span></p>
-              </section>
-            </div>
-          </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <Footer></Footer>
