@@ -24,7 +24,7 @@
           <transition name="fade-choose">
             <div class="food-content" v-show="changShowType == 'food'">
                 <div class="food-content-top">
-                    <div class="food-menu">
+                    <div class="food-menu" ref="wrapper">
                         <ul>
                             <li :class="{activity_menu: 0 == menuIndex}"  @click="chooseMenu(0)">热销榜</li>
                             <li>折扣榜</li>
@@ -204,7 +204,7 @@
           </transition>
           <transition name="fade-choose">
             <div class="rating-content" v-show="changShowType == 'rating'">
-                
+
             </div>
           </transition>
       </div>
@@ -226,27 +226,35 @@
 </template>
 
 <script>
+import BScroll from 'better-scroll'
+
 export default {
-    data() {
-        return {
-            changShowType: 'food',
-            menuIndex: 0
-        }
-    },
-    methods: {
-        goBack() {
-            this.$router.go(-1);
-        },
-        chooseMenu(index){
-            this.menuIndex = index;
-            //menuIndexChange解决运动时listenScroll依然监听的bug
-            this.menuIndexChange = false;
-            // this.foodScroll.scrollTo(0, -this.shopListTop[index], 400);
-            // this.foodScroll.on('scrollEnd', () => {
-            //     this.menuIndexChange = true;
-            // })
-        },
+  data () {
+    return {
+      changShowType: 'food',
+      menuIndex: 0,
+      scroll: null
     }
+  },
+  mounted () {
+    this.$nextTick(() => {
+      this.scroll = new BScroll(this.$refs.wrapper, {})
+    })
+  },
+  methods: {
+    goBack () {
+      this.$router.go(-1)
+    },
+    chooseMenu (index) {
+      this.menuIndex = index
+      // menuIndexChange解决运动时listenScroll依然监听的bug
+      this.menuIndexChange = false
+      // this.foodScroll.scrollTo(0, -this.shopListTop[index], 400);
+      // this.foodScroll.on('scrollEnd', () => {
+      //     this.menuIndexChange = true;
+      // })
+    }
+  }
 }
 </script>
 
@@ -289,7 +297,7 @@ export default {
         margin-right: 0.3rem;
         width: 2.9rem;
         height: 2.9rem;
-        
+
     }
     .banner-text {
         flex-shrink: 1;
@@ -345,12 +353,13 @@ export default {
     .food-content-top {
         display: flex;
         flex: 1;
-        overflow-y: hidden;
-        position: relative;
+        // overflow: hidden;
+        // position: relative;
+        // height: calc(100% - 6.4rem);
     }
     .food-menu {
-        
-       
+        height: calc(100% - 6.4rem);
+        overflow: hidden;
         ul {
             width: 3.8rem;
             background-color: #F5F5F5;
@@ -371,7 +380,8 @@ export default {
     }
     .foods-list {
         flex: 4;
-        overflow-y: auto;
+        overflow-y: hidden;
+        height: calc(100% - 6.4rem);
         header {
             width: 100%;
             padding: 0.4rem 0.4rem;
@@ -460,8 +470,8 @@ export default {
                         color: #f60;
                         font-weight: bold;
                         margin-right: .3rem;
-                    }   
-                    
+                    }
+
                 }
             }
         }
@@ -526,7 +536,7 @@ export default {
                 color: #fff;
                 font-weight: bold;
             }
-            
+
         }
     }
 </style>
