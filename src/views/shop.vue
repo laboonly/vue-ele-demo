@@ -42,7 +42,7 @@
                             <li>折扣榜</li>
                         </ul>
                     </div>
-                    <div class="foods-list">
+                    <div class="foods-list" ref="foods">
                         <ul>
                             <li>
                                 <header>
@@ -233,13 +233,15 @@ export default {
     return {
       changShowType: 'food',
       menuIndex: 0,
-      scroll: null
+      scroll: null,
+      listScroll: null,
     }
   },
   mounted () {
-    this.$nextTick(() => {
-      this.scroll = new BScroll(this.$refs.wrapper, {})
-    })
+    // this.$nextTick(() => {
+    //   this.scroll = new BScroll(this.$refs.wrapper, {})
+    //   this.listScroll = new BScroll(this.$refs.foods, {})
+    // })
   },
   methods: {
     goBack () {
@@ -358,8 +360,8 @@ export default {
         // height: calc(100% - 6.4rem);
     }
     .food-menu {
-        height: calc(100% - 6.4rem);
-        overflow: hidden;
+        height: calc(100% - 200px);
+        overflow: scroll;
         ul {
             width: 3.8rem;
             background-color: #F5F5F5;
@@ -380,8 +382,9 @@ export default {
     }
     .foods-list {
         flex: 4;
-        overflow-y: hidden;
-        height: calc(100% - 6.4rem);
+        overflow: scroll;
+        height: calc(100% - 200px);
+        position: relative;
         header {
             width: 100%;
             padding: 0.4rem 0.4rem;
