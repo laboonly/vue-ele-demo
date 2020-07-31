@@ -234,7 +234,7 @@ export default {
       changShowType: 'food',
       menuIndex: 0,
       scroll: null,
-      listScroll: null,
+      listScroll: null
     }
   },
   mounted () {
@@ -352,15 +352,18 @@ export default {
     .fade-choose-enter, .fade-choose-leave-active {
         opacity: 0;
     }
+    // .shop-detail-content {
+    //     height: calc(100% - 108px);
+    // }
     .food-content-top {
         display: flex;
         flex: 1;
         // overflow: hidden;
         // position: relative;
-        // height: calc(100% - 6.4rem);
+        // height: calc(100vh - 6.4rem);
     }
     .food-menu {
-        height: calc(100% - 200px);
+        height: calc(100vh - 200px);
         overflow: scroll;
         ul {
             width: 3.8rem;
@@ -383,7 +386,7 @@ export default {
     .foods-list {
         flex: 4;
         overflow: scroll;
-        height: calc(100% - 200px);
+        height: calc(100vh - 200px);
         position: relative;
         header {
             width: 100%;
